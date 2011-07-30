@@ -56,11 +56,11 @@ module PGResolver
     nil
   end
 
-  def specified_db_or_all
+  def specified_db_or_all (config)
     if specified_db?
       yield resolve_db
     else
-      Resolver.all(config_vars).each { |db| yield db }
+      Resolver.all(config).each { |db| yield db }
     end
   end
 
