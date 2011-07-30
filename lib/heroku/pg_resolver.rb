@@ -53,7 +53,7 @@ module PGResolver
   end
 
   def db_flag
-    @db_flag ||= args.shift
+    nil
   end
 
   def specified_db_or_all
